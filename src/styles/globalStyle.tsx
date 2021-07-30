@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { Background } from "../assets/index";
 // npm i styled-reset
 // npm i --save-dev @types/styled-components
 
@@ -9,9 +10,9 @@ const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
     body{
-        background-color:black;
-        padding-top:130px;
         font-family:Arial, Helvetica, sans-serif;
+        background-image: url(${Background});
+        background-size: 100% 100vh;
     }
     *{
         -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;  
@@ -23,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     button{
         outline:none;
         cursor:pointer;
+        border:none;
     }
     input{
         outline:none;
