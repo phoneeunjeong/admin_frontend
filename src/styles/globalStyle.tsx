@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
     body{
-        padding-top:130px;
         font-family:Arial, Helvetica, sans-serif;
         background-image: url(${Background});
         background-size: 100% 100vh;
