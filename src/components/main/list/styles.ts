@@ -20,7 +20,8 @@ export const List = styled.div`
     background: ${COLOR.whiteColor};
     border-radius: 15px; 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     .circle{
         width: 95px; 
@@ -37,12 +38,22 @@ export const List = styled.div`
     .circle3{
         background: #A06CFF ;
     }   
+
+    & ul {
+        display: grid;
+        grid: '. .';
+        gap: 50px;
+        font-size: 20px;
+        margin-top: 10px;
+    }
 `
 
 export const Name = styled.p`
-
+    color: ${COLOR.mainTextColor};
+    margin-top: 20px;
 `
 
 export const Whether = styled.p`
-
+    color: ${COLOR.negativeColor};
+    margin-top: 20px;
 `
