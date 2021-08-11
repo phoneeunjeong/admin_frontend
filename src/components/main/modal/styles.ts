@@ -62,3 +62,12 @@ export const Bottom = styled.footer`
         font-weight: bold;
     }
 `
+
+export const Back = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 45%;
+    z-index: -1;
+`

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { Component, ComponentElement, useState } from "react";
 import * as S from "./styles";
 import { Phone, Laptop, PersonalLaptop } from "../../../assets/index";
 import ListProps from "../../../interfaces/ListProps";
+import Modal from "../modal/index";
 
 const List = () => {
+
+    const [modal, setModal] = useState(null);
+
+    const modalChange = () => {
+        setModal(
+            <Modal />
+        )
+    }
+
     return (
         <>
             <S.Block>
