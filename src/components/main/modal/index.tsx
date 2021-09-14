@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import * as S from "./styles";
 import { Phone, Laptop, PersonalLaptop } from "../../../assets/index";
 import ListProps from "../../../interfaces/ListProps";
 
-
-const Modal = () => {
+interface Props {
+    isModal : boolean
+}
+const Modal: FC<Props> = ({isModal}) => {
+    useEffect(()=>{
+        console.log("test");
+    },[])
     return (
-        <section >
+        <>
+        {isModal && (
+        <section>
             <S.Back></S.Back>
             <S.Wrapper>
                 <S.Modal>
@@ -39,6 +46,8 @@ const Modal = () => {
                 </S.Modal>
             </S.Wrapper>
         </section>
+        )}
+        </>
     )
 }
 

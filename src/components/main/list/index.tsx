@@ -6,12 +6,12 @@ import Modal from "../modal/index";
 
 const List = () => {
 
-    const [modal, setModal] = useState(null);
+    // const [modal, setModal] = useState<React.ReactElement | null>(null);
 
-    const modalChange = () => {
-        setModal(
-            <Modal />
-        )
+    const [isModal, setIsModal] = useState<boolean>(false);
+
+    const showModal = () => {
+        setIsModal(true);
     }
 
     return (
@@ -39,7 +39,7 @@ const List = () => {
                     {
                         [...Array(8)].map((n, index) => {
                             return (
-                                <ul>
+                                <ul onClick={showModal}>
                                     <S.Name>1101 폰은정</S.Name>
                                     <S.Whether>지각</S.Whether>
                                 </ul>
@@ -54,7 +54,9 @@ const List = () => {
                     <div className="circle circle3"></div>
                 </S.List>
             </S.Block>
+            <Modal isModal={isModal}/>
         </>
+
     )
 }
 

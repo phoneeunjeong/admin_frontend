@@ -8,13 +8,13 @@ export const Block = styled.div`
 
     & img{
         width: 80px;
+        z-index: 2;
     }
     
 `
 
 export const List = styled.div`
     margin-top: -20px;
-    z-index: -1;
     width: 350px;
     height: 540px;
     background: ${COLOR.whiteColor};
