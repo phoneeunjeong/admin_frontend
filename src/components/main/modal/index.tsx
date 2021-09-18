@@ -4,23 +4,29 @@ import { Phone, Laptop, PersonalLaptop } from "../../../assets/index";
 import ListProps from "../../../interfaces/ListProps";
 
 interface Props {
-    isModal : boolean
+    isModal : boolean,
+    setIsModal: boolean | any,
+    setIsPage: boolean | any
 }
-const Modal: FC<Props> = ({isModal}) => {
-    useEffect(()=>{
-        console.log("test");
-    },[])
+
+
+const Modal: FC<Props> = ({isModal, setIsPage, setIsModal}) => {
+    const closeModal =() => {
+        setIsModal(false);
+        setIsPage(true);
+    }
+
     return (
         <>
         {isModal && (
-        <section>
+            <>  
             <S.Back></S.Back>
             <S.Wrapper>
                 <S.Modal>
                     <S.Top>
                         <p></p>
                         <p>1101 psks</p>
-                        <p style={{ cursor: "pointer" }}>X</p>
+                        <p style={{ cursor: "pointer" }} onClick={closeModal}>X</p>
                     </S.Top>
                     <S.Content>
                         <div>
@@ -45,7 +51,7 @@ const Modal: FC<Props> = ({isModal}) => {
                     </S.Bottom>
                 </S.Modal>
             </S.Wrapper>
-        </section>
+            </>
         )}
         </>
     )

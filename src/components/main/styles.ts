@@ -7,8 +7,8 @@ export const Wrapper = styled.section`
 `
 
 export const Main = styled.div`
-    width: ${WIDTH.mainWidth};
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `
 
