@@ -10,5 +10,5 @@ export const request = (method : Method, url: string) => {
         data: {}
     })
     .then((res)=> {return res.data})
-    .catch((err) => {return err});
+    .catch((err) => {throw new Error(err)});
 }
