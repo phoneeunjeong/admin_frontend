@@ -1,7 +1,11 @@
-import React from "react";
+import React,{FC, useState} from "react";
 import * as S from "./styles";
 
+
 const Card = () => {
+
+    const [isApply, setIsApply] = useState<boolean>(false);
+
     return(
         <S.Wrapper>
             <S.StudentInfo>
@@ -10,9 +14,21 @@ const Card = () => {
             </S.StudentInfo>
             <div>
                 <S.Device>
-                    <p>O</p>
-                    <p>X</p>
-                    <p>O</p>
+                    <>
+                        {isApply == false ?
+                            <p style={{color: "#4bf94b"}}>O</p> : <p style={{color: "#ff4a3d"}}>X</p>    
+                        }
+                    </>
+                    <>
+                        {isApply == false ?
+                            <p style={{color: "#4bf94b"}}>O</p> : <p style={{color: "#ff4a3d"}}>X</p>    
+                        }
+                    </>
+                    <>
+                        {isApply == false ?
+                            <p style={{color: "#4bf94b"}}>O</p> : <p style={{color: "#ff4a3d"}}>X</p>    
+                        }
+                    </>
                 </S.Device>
             </div>
         </S.Wrapper>

@@ -24,33 +24,19 @@ const List = () => {
     }
     
     return (
-        // <>
-        // {isPage && (
-        //     <>
-        //         <S.Block>
-        //             <img src={Phone} alt="" />
-        //             <S.List>
-        //                 <div className="circle circle1"></div>
-        //             </S.List>
-        //         </S.Block>
-        //         <S.Block>
-        //             <img src={Laptop} alt="" />
-        //             <S.List>
-        //                 <div className="circle circle2"></div>
-                            
-        //             </S.List>
-        //         </S.Block>
-        //         <S.Block>
-        //             <img src={PersonalLaptop} alt="" />
-        //             <S.List>
-        //                 <div className="circle circle3"></div>
-        //             </S.List>
-        //         </S.Block>
-        //     </>
-        // )}
-        // <Modal isModal={isModal} setIsPage={setIsPage} setIsModal={setIsModal} />
-        // </>
+        
         <S.Wrapper>
+            <S.ListHeader>
+                <S.Information>
+                    <p>학번</p>
+                    <p>이름</p>
+                </S.Information>
+                <S.Applied>
+                    <img src={Phone} alt="" />
+                    <img src={Laptop} alt="" />
+                    <img src={PersonalLaptop} alt="" />
+                </S.Applied>
+            </S.ListHeader>
             {
                 [...Array(30)].map((i, index) => {
                     return(

@@ -18,6 +18,7 @@ export const StudentInfo = styled.div`
 
     & p{
         color: ${COLOR.mainTextColor};
+        margin-left: 10px;
     }
 `
 
@@ -27,5 +28,8 @@ export const Device = styled.div`
 
     & p{
         color: ${COLOR.mainTextColor};
+        margin-left: 100px;
+        font-size: 20px;
+        font-weight: bold;
     }
 `
